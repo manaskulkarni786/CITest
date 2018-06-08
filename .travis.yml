@@ -11,6 +11,7 @@ before_script:
   
 install:
 - wget -O Codelite.deb https://downloads.codelite.org/downloads.php?ubuntu_1804_64_weekly
+- sudo gdebi Codelite.deb
 - sudo dpkg -i Codelite.deb
 
 script:
