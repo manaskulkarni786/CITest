@@ -4,11 +4,14 @@ os: linux
 dist: trusty
 
 compiler:
-  - clang
+- clang
   
-  before_script:
-  - sudo apt-get install
+before_script:
+- sudo apt-get install
   
-  install:
-  - wget https://downloads.codelite.org/downloads.php?ubuntu_1804_64_weekly
-  - sudo dpkg -i CodeLite-12.0.3-gtk2-ubuntu-bionic-x86_64.deb
+install:
+- wget https://downloads.codelite.org/downloads.php?ubuntu_1804_64_weekly
+- sudo dpkg -i CodeLite-12.0.3-gtk2-ubuntu-bionic-x86_64.deb
+
+script:
+python PyBuild.py
