@@ -1,6 +1,12 @@
 language: cpp
 sudo: required
 os: linux
+addons:
+  apt:
+    sources:
+      - llvm-toolchain-trusty-6.0
+    packages:
+      - clang-6.0
 dist: trusty
 
 compiler:
@@ -10,8 +16,6 @@ before_script:
 - sudo apt-get install
   
 install:
-- sudo apt-get update
-- sudo apt-get upgrade
 - sudo apt-get install gdebi-core
 - wget -O Codelite.deb https://downloads.codelite.org/downloads.php?ubuntu_1804_64_weekly
 - sudo gdebi Codelite.deb
